@@ -1,2 +1,2 @@
-![](images/Windows_Active_Directory_Domain_Services.png)
+![](images/Windows_Active_Directory_Domain_Services-2.png)
 # How to install Windows AD to create a mock corporate network!
