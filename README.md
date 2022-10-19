@@ -1,9 +1,9 @@
-![](images/Windows_Active_Directory_Domain_Services-2.png)
-# How to setup a Windows AD (within Virtual Box) to create a corporate network.
+![](images/ActiveDirectory.png)
+# How to setup a Windows Active Directory (within Virtual Box) to create a corporate network.
 ### Learning Objectves:
 1. We will learn how to provision multiple virutal machines.
 2. Configure a basic Windows networking environment with Active Directory.
-3. Execute PowerShell script to further our AD environment. 
+3. Execute PowerShell script to further our Active Directory environment. 
 
 
 ### Technologies and Protocols:
@@ -15,7 +15,7 @@
 
 ### Overview:
 ![](images/WindowsADdrawIO.png)
-Pictured above is a high-level overview of our corporate network. First, we are going to download Virtual Box, Windows 10 and Windows server 2019 ISO files (**see below**). Then, we are going to create our first virtual machine with Windows server 2019 installed. This will act as our doamin controller (DC) and where we will house Active Directory. We are going to give our DC two network interface cards (NICs): one will connect to the external ![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) `internet` the other will be for the ![#1589F0](https://via.placeholder.com/15/1589F0/1589F0.png) `internal` network so that the Windows 10 clients can connect through and reach the internet.
+Pictured above is a high-level overview of our corporate network. First, we are going to download Virtual Box, Windows 10 and Windows server 2019 ISO files (**see below**). Then, we are going to create our first virtual machine with Windows server 2019 installed. This will act as our doamin controller (DC) and where we will house Active Directory (AD). We are going to give our DC two network interface cards (NICs): one will connect to the external ![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) `internet` the other will be for the ![#1589F0](https://via.placeholder.com/15/1589F0/1589F0.png) `internal` network so that the Windows 10 clients can connect through and reach the internet.
 
 We will assign IP addressing for the internal network, while the external network automatically gets IP addressing from your home network. After assinging IPs we will create our domain thorugh Active Directory, configure network address translation (NAT) and setup Dynamic Host Configuration Protocol (DHCP) for internet connectivity.
 
