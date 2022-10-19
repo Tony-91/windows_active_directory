@@ -1,5 +1,10 @@
 ![](images/Windows_Active_Directory_Domain_Services-2.png)
 # How to setup a Windows AD (within Virtual Box) to create a corporate network.
+### Learning Objectves:
+1. We will learn how to provision multiple virutal machines.
+2. Configure a basic Windows networking environment with Active Directory.
+3. Execute PowerShell script to further our AD environment. 
+
 
 ## Overview:
 ![](images/WindowsADdrawIO.png)
@@ -14,12 +19,12 @@ After completing our DC virtual machine, we will create another virtual machine 
 
 
 ## Technologies and Protocols:
-* Window's Active Directory
-* Window's networking: Domain controler, DHCP, and NAT
 * Oracle Virutal Box
+* Window's Active Directory
+* Window's networking: Domain controler, DHCP and NAT
 * Powershell 
 
-## Learning Objectves:
-1. 
+
+
 
 ![](images/Home%20Lab%20-DC/DomainController/DC1.png) 
