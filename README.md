@@ -125,9 +125,12 @@ After completing our DC virtual machine, we will create another virtual machine 
 
 ![](images/Home%20Lab%20-DC/DomainController/DC11a.png)
 
-11B: Fill out first and last name. Choose and confirm the password **Password1**, uncheck User must change the password at next logon, and *CHECK* Password never expires. Click next. Click Finish.
+## Step 11B: Fill out first and last name.
+- Choose and confirm the password **Password1**, uncheck User must change the password at next logon, and *CHECK* Password never expires. Click next. Click Finish.
 
 ![](images/Home%20Lab%20-DC/DomainController/DC11b.png)
+
+> Make note of your full name AND user logon name for furture use
 
 
 
