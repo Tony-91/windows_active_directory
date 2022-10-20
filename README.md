@@ -105,7 +105,27 @@ After completing our DC virtual machine, we will create another virtual machine 
 ## Step 10A: Create our domain after installing the domain service software
 - Open the Server Manager dashboard, click on the yellow notification icon on top and click Promote this server to a domain controller
 - Under Deployment Configuration, select Add a new forest and name the Root domain mydomain.com. Click next.
-- Under Domain Controller Options, input and confirm your password (Password1). Click next
+- Under Domain Controller Options, input and confirm your password (**Password1**). Click next
 
 ![](images/Home%20Lab%20-DC/DomainController/DC10a.png)
+
+## Step 10B: Under DNS Options, click next to skip.
+- Under Additional Options, click next to skip.
+-  Under Paths, click next to skip.
+-  Under Review Options, click next to skip.
+-  Finally, under Prerequisites Check,  click Install. The system will restart.
+-  Sign in to the newly created MYDOMAIN\Administrator account **Password1**
+
+![](images/Home%20Lab%20-DC/DomainController/DC10b.png)
+
+## Step 11A: Create a dedicated Admin Account
+- Click Start > Windows Administrative Tools > Active Directory Users and Computers 
+- Right-click mydomain.com and click > New > Organizational Unit. Uncheck the box, and name it Admins.
+- Right-click the new folder Admins and click > New > User
+
+![](images/Home%20Lab%20-DC/DomainController/DC11a.png)
+
+
+
+
 
