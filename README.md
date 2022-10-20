@@ -188,9 +188,9 @@ After completing our DC virtual machine, we will create another virtual machine 
 
 ![](images/Home%20Lab%20-DC/DomainController/DC15b.png)
 
-## Step 15C. right-click dc.domain.com > authorize
-- right-click IPv4 > refresh
-- the icons should turn green as pictured 
+## Step 15C: Right-click dc.domain.com > authorize
+- Right-click IPv4 > refresh
+- The icons should turn green as pictured 
 
 ![](images/Home%20Lab%20-DC/DomainController/DC15c.png)
 
