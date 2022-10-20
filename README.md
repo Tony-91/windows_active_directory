@@ -33,12 +33,14 @@ After completing our DC virtual machine, we will create another virtual machine 
 - VDI
 - Dynamically allocate
     - Under settings > general > advance set ‘shared clipboard’ and ‘drag’n’drop’ to bidirectional (drag files + copy/paste from host machine)
+    
 ![](images/Home%20Lab%20-DC/DomainController/DC1.png) 
 
 ## Step 2: Our goal is to have two NICs (network interface cards); one for the intranet and one for the internet.
 - Under settings > network > Adapter 2 tab: select Internal Network. This will connect our machine to the intranet (internal network).
 - The Adapter 1 tab is set to NAT network by default (our connection to the internet).
-
+       
+![](images/Home%20Lab%20-DC/DomainController/DC2.png)
 
 
 
