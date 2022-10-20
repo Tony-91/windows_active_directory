@@ -229,4 +229,17 @@ After completing our DC virtual machine, we will create another virtual machine 
 ![](images/Home%20Lab%20-DC/DomainController/DC17c.png)
 
 
+# Time to create our **Windows 10 Client** in Virtual Box.
+
+### Step 1: Head back into virtual box and click > new; name it CLIENT1 with a version of Windows 10 (64-bit). Click Continue. 
+- 2048 MB of RAM is fine.
+- Create a virtual hard disk now
+- VDI
+- Dynamically allocated
+- Under settings > advance set Shared Clipboard and Drag’n’Drop to Bidirectional 
+- Under system > Network select Internal Network (instead of using our home network with NAT, we are going to use our internal ’corporate’ network)
+- Double-click CLIENT1 to start up and click the folder icon with the green arrow
+- Click add disk image and find your Windows 10 ISO file to upload
+
+![](images/Home%20Lab%20-DC/Client/C1.png)
 
