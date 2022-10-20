@@ -76,6 +76,11 @@ After completing our DC virtual machine, we will create another virtual machine 
 
 ![](images/Home%20Lab%20-DC/DomainController/DC6.png)
 
+## Step 7: After re-naming, we need to assign an IP to intra-net (DHCP automatically gives inter-net an IP).
+- Right-click intra-net > properties  > double click internet protocol version (TCP/IPv4)
+- Assign IPs as seen in screenshot below:
+
+![](images/Home%20Lab%20-DC/DomainController/DC7.png)
 
 
 
