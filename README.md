@@ -132,7 +132,101 @@ After completing our DC virtual machine, we will create another virtual machine 
 
 > Make note of your full name AND user logon name for furture use
 
+## Step 12: Make our user Admin
+- Right-click our new admin and click > Properties > Member Of and click Add
+- Enter domain admins into the field and click Check Names off to the right. It should resolve into Domain Admins.
+- Click > Ok > Apply > Ok  
+- Sign out 
 
+![](images/Home%20Lab%20-DC/DomainController/DC12.png)
+
+
+## Step 13: Re-login with Domain Admin account
+- Select Other User and log in with the admin credentials we created earlier 
+- **Password1**
+
+![](images/Home%20Lab%20-DC/DomainController/DC13.png)
+
+## Step 14A: Install Remote Access Server (RAS) and Network Address Translation (NAT): This allows our Windows clients to access the private (internal) network as well as the internet through our domain controller. 
+- Search and open Server Manager. From the dashboard click > Add roles and Features > next > next 
+- Under Server Selection select our server and click next
+- Under Server Roles select Remote Access and click next
+- Under Features click next
+- Under Role Services check Routing and click Add Features
+- Click next until you reach Results > click install
+
+![](images/Home%20Lab%20-DC/DomainController/DC14a.png)
+
+## Step 14B: Now to install NAT
+- On Server Manager Dashboard click Tools from the top of the window > Routing and Remote Access
+- Right-click DC (local) > Configure and Enable Routing and Remote Access > next > select Network address translation (NAT) and click next
+- If you do not see any Network Interfaces click cancel and click Tools to repeat the steps one more time.
+
+![](images/Home%20Lab%20-DC/DomainController/DC14b.png)
+
+## Step 14C: Install NAT (cont.)
+- Select Use this public interface to connect to the internet and choose INTER-net (IP address x.x.x.x DHCP)
+- Click next > finish
+- After some time, DC (local) icon should show and green arrow
+
+![](images/Home%20Lab%20-DC/DomainController/DC14c.png)
+
+## Step 15A: Set up a DHCP server on Domain Controller (in order to resolve an IP and connect to the internet for the client).
+- Server Manager Dashboard > Add Roles and Features click > next until you reach Server Roles
+- Under Server Roles check the box DHCP server and click Add features.
+- Click next until > install
+
+![](images/Home%20Lab%20-DC/DomainController/DC15a.png)
+
+## Step 15B: Go back to Server Manager Dashboard and click > Tools > DHCP
+- Click dc.domain.com and right-click IPv4 > new scope
+- Click next and name: 172.16.0.100-200 and click next
+- with a little faith, match the start and IPs as pictured, as well as the length and subnet mask. 
+- Click next > next; under Configure DHCP Options select yes and hit next
+- Set the default gateway IP address as 172.16.0.1 and click ADD. Click next
+- Click next until you reach and click FINISH
+
+![](images/Home%20Lab%20-DC/DomainController/DC15b.png)
+
+## Step 15C. right-click dc.domain.com > authorize
+- right-click IPv4 > refresh
+- the icons should turn green as pictured 
+
+![](images/Home%20Lab%20-DC/DomainController/DC15c.png)
+
+## Step 16: Enable web browsing on local DC
+- Server Manager > Dashboard > Configure this local server
+- Click ‘on’ option for IE Enhanced Security Configuration 
+- Select the OFF option for both Administrators and Users
+
+![](images/Home%20Lab%20-DC/DomainController/DC16.png)
+
+## Step 17A: Use Power Shell script to create client users (instead of manually creating them).
+- [Powershell Script](https://github.com/joshmadakor1/AD_PS "Powershell Script")
+- On the GitHub link, click > code and download ZIP (save it to the desktop)
+- Open the folder and open names.txt (text file with randomly generated names), and add your name to the top of the file.
+- Click file > save and close the file
+
+![](images/Home%20Lab%20-DC/DomainController/DC17a.png)
+
+## Step 17B: Click start > right-click PowerShell ISE > Run as Administrator 
+- Click file > open > AD_PS-master (from desktop) > 1_CREATE_USERS 
+- Now to enable the execution of scripts in PowerShell: on the command line write Set-Execution Policy Unrestricted and click Yes to All when prompted 
+
+![](images/Home%20Lab%20-DC/DomainController/DC17b.png)
+
+> Some explanation to Create Users script: the script creates users (New-Aduser) and gives them the user name found in names.txt file
+> ($USER_FIRST_LAST_LIST = Get-content .\names.txt); additionally their passwords are set to Password1 ($PASSWORD_FOR_USERS = Password1)
+
+## Step 17C: Let’s execute our script 
+- On the command line, let’s change our directory to execute our code: cd C:\users\your-username\desktop\AD_PS-master
+- Your-username should begin with “a-“. TIP: use the TAB to auto-complete.
+- From the top, hit the green play button icon to run the script. Click Run once when prompted
+- Viola! The user accounts should be created in real-time.
+- Go back to Server Manager > Dashboard and click tools > Active Directory Users and Computers. Right-click mydomain.com and click refresh. Under the _USERS folder within mydomain.com, we can confirm our newly created users.
+- If you right-click the _USERS folder > find… we can search for specific users and edit their settings. Try searching for yourself and play around!
+
+![](images/Home%20Lab%20-DC/DomainController/DC17c.png)
 
 
 
