@@ -228,6 +228,10 @@ After completing our DC virtual machine, we will create another virtual machine 
 
 ![](images/Home%20Lab%20-DC/DomainController/DC17c.png)
 
+![](images/Home%20Lab%20-DC/DomainController/DC17c2.png)
+
+![](images/Home%20Lab%20-DC/DomainController/DC17c3.png)
+
 
 # Time to create our **Windows 10 Client** in Virtual Box.
 
@@ -243,3 +247,50 @@ After completing our DC virtual machine, we will create another virtual machine 
 
 ![](images/Home%20Lab%20-DC/Client/C1.png)
 
+## Step 2: Install and set up CLIENT1
+- Custom install 
+- I don’t have a product key
+- (If prompted select Windows 10 Pro)
+- (If prompted select join Domain)
+- Name: user, on password click next
+- Turn off all services and Cortona
+
+## Step 3: Let’s test connectivity (remember, we are using the DC as our default gateway to connect us to the internet)
+- Search and open the command prompt
+- On the command line: ping www.google.com
+- If zero packets are lost this means a couple of things; (1) our DNS resolved and our DNS server is up and running, and (2) our connectivity to the internet is up!
+- The DC forwards are ping requests and sends them right back to us successfully.
+
+![](images/Home%20Lab%20-DC/Client/C3.png)
+
+## Step 4: Join this client to our domain controller (and rename)
+- Right-click start button > system
+- Scroll to the bottom and click Rename this PC (advance)
+- Click Change… and rename it to CLIENT1
+- Select Domain under Member of and type mydomain.com. Click ok
+- When prompted sign in with your domain login: a-your_name AND password (Password1).
+- Restart your computer 
+
+![](images/Home%20Lab%20-DC/Client/C4.png)
+
+## Step 5: Check Address Lease on DC
+- Back on DC, go to your Server Manager Dashboard > Tools > DHCP
+- Under dc.mydomain.com > IPv4 > Scope > Address lease we can see the IP our CLIENT1 is assigned to (in an enterprise environment this space would be filled with our CLIENT IPs).
+
+![](images/Home%20Lab%20-DC/Client/C5.png)
+
+## Step 6: Find CLIENT1 on DC
+- On DC, click start > Windows Administrator Tools > Active Directory Users and Computers
+- Under the Computers container/folder we see our CLIENT1 computer
+
+![](images/Home%20Lab%20-DC/Client/C6.png)
+
+## Step 7: Use generated user to log into CLIENT1
+- Back on CLIENT1 sign out and sign back in by selecting Other User from the bottom
+- Choose a name from the names.txt file (from our PowerShell script) and login **Password1**
+
+![](images/Home%20Lab%20-DC/Client/C7.png)
+
+ And we’re in! (Use the `whoami` command to confirm).
+
+![](images/Home%20Lab%20-DC/Client/FINAL.png)
