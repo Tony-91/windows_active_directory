@@ -82,8 +82,18 @@ After completing our DC virtual machine, we will create another virtual machine 
 
 ![](images/Home%20Lab%20-DC/DomainController/DC7.png)
 
+## Step 8: Re-name this PC
+- Right-click the start window found at the bottom left > system > rename this pc
+- Re-name to DC (domain controller)
+- Restart your VM
 
+![](images/Home%20Lab%20-DC/DomainController/DC8.png)
 
+## Step 9A: Install Active Directory Domain Services
+- Search for server manager > click Add roles and features and click next
+- Under installation, type click role-based or feature-based installation and click next
+- Under server, select ‘select a server from the server pool’ and choose our only server option and click next
 
+![](images/Home%20Lab%20-DC/DomainController/DC9a.png)
 
 
