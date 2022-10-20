@@ -96,4 +96,16 @@ After completing our DC virtual machine, we will create another virtual machine 
 
 ![](images/Home%20Lab%20-DC/DomainController/DC9a.png)
 
+## Step 9B: Under server roles, click Active Directory Domain Services and click Add Features
+- Under Features, click next to skip, and under AD DS click next to skip. 
+- Under the Confirmation tab, click Install
+
+![](images/Home%20Lab%20-DC/DomainController/DC9b.png)
+
+## Step 10A: Create our domain after installing the domain service software
+- Open the Server Manager dashboard, click on the yellow notification icon on top and click Promote this server to a domain controller
+- Under Deployment Configuration, select Add a new forest and name the Root domain mydomain.com. Click next.
+- Under Domain Controller Options, input and confirm your password (Password1). Click next
+
+![](images/Home%20Lab%20-DC/DomainController/DC10a.png)
 
