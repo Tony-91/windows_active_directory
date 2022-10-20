@@ -25,9 +25,22 @@ After completing our DC virtual machine, we will create another virtual machine 
 
 
 
-
-
-
-
-
+## Step 1: [Download: Virtual Box](https://www.virtualbox.org/wiki/Downloads "Virtual Box"), [Windows '19 server ISO](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019 "Windows '19 server ISO") and [Windows 10 ISO](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019 "Windows 10 ISO").
+- Virtual box (download ‘VM Virtual Box Extension Pack’ found on the same page as Virtual Box for your host machine download )
+- ISO: Windows Server and Windows 10
+    - Set RAM (2048 MB is fine enough) and memory (30 GB is fine) to your needs.
+- Create a virtual hard disk now
+- VDI
+- Dynamically allocate
+    - Under settings > general > advance set ‘shared clipboard’ and ‘drag’n’drop’ to bidirectional (drag files + copy/paste from host machine)
 ![](images/Home%20Lab%20-DC/DomainController/DC1.png) 
+
+## Step 2: Our goal is to have two NICs (network interface cards); one for the intranet and one for the internet.
+- Under settings > network > Adapter 2 tab: select Internal Network. This will connect our machine to the intranet (internal network).
+- The Adapter 1 tab is set to NAT network by default (our connection to the internet).
+
+
+
+
+
+
