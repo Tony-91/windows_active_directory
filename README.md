@@ -55,9 +55,9 @@ After completing our DC virtual machine, we will create another virtual machine 
 
 > Windows DC
 > 
->Username: Administrator 
+> **Username: Administrator**
 >
-> Password: Password1
+> **Password: Password1**
 > 
 > If asked to Press Ctrl+Alt+Delete to Unlock the home page click Input from the top of the page > keyboard > Insert Ctrl+Alt+Delete (these instructions are for a Mac host machine, but similar instructions for a Windows Host).
 
@@ -67,6 +67,14 @@ After completing our DC virtual machine, we will create another virtual machine 
 - Double click and install BoxWindowsAdditions-amd64
 
 ![](images/Home%20Lab%20-DC/DomainController/DC5.png)
+
+## Step 6: Set up NIC - internal connection 
+- Click the little computer symbol found in the bottom right of the screen
+- Choose ‘undefined network’ > change adapter options
+- We should see two networks on this machine. Re-name the left most inter-net and the second one intra-net.
+- *Inter-net is our NIC to the internet and intra-net is our NIC to our internal network.*
+
+![](images/Home%20Lab%20-DC/DomainController/DC6.png)
 
 
 
