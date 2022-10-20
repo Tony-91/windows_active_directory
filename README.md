@@ -42,6 +42,34 @@ After completing our DC virtual machine, we will create another virtual machine 
        
 ![](images/Home%20Lab%20-DC/DomainController/DC2.png)
 
+## Step 3: Upload ISO server onto our newly created domain controller VM.
+- Go to settings > storage and click the blue disk/CD image. 
+- Click ‘Choose a disk file…’ and upload the server ISO from where you saved it to.
+
+![](images/Home%20Lab%20-DC/DomainController/DC3.png)
+
+## Step 4 Configure your new Windows server machine (selecting standard desktop experience).
+- This may take a while
+
+![](images/Home%20Lab%20-DC/DomainController/DC4.png)
+
+> Windows DC
+> 
+>Username: Administrator 
+>
+> Password: Password1
+> 
+> If asked to Press Ctrl+Alt+Delete to Unlock the home page click Input from the top of the page > keyboard > Insert Ctrl+Alt+Delete (these instructions are for a Mac host machine, but similar instructions for a Windows Host).
+
+## Step 5: Install windows guest additions 64
+- First, click Devices (found on top of the screen, on Mac) > insert guest additions CD image
+- Click file explorer > this pc and double click CD Drive (D:) Virtual Box Guest Additions
+- Double click and install BoxWindowsAdditions-amd64
+
+![](images/Home%20Lab%20-DC/DomainController/DC5.png)
+
+
+
 
 
 
