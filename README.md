@@ -1,7 +1,7 @@
 ![](images/ActiveDirectory.png)
 # How to setup a Windows Active Directory (within Virtual Box) to create a corporate network.
 ### Learning Objectves:
-1. We will learn how to provision multiple virutal machines.
+1. We will learn how to provision multiple virtual machines.
 2. Configure a basic Windows networking environment with Active Directory.
 3. Execute PowerShell script to further our Active Directory environment. 
 
